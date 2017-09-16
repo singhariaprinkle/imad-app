@@ -16,9 +16,9 @@ button.onclick = function () {
               span.innerHTML = counter.toString();
           }
       }
-  }
-  //render the variable in the correct span
-  counter = counter + 1;
-  var span= document.getElementById('count');
-  span.innerHTML =counter.toString();
+  };
+  //make request
+  request.open('GET','http://prinklesingharia.imad.hasura-app.io/counter',true);
+  request.send(null);
+  
 };
