@@ -16,7 +16,7 @@ app.use(morgan('combined'));
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-
+var pool= new Pool(config);
 app.get('/test-db',function(req, res)
 {
    //make select request
